@@ -1,0 +1,96 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,body {
+	height: 100%;
+}
+.game-wrapper {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.game {
+	width: 400px;
+	height: 400px;
+	border: 1px solid black;
+	position: relative;
+	background-image: url(../img/space_bg_02.jpg);
+	background-position: 20% 50%;
+	background-size: cover;
+}
+#turret {
+	position: absolute;
+	height: 25px;
+	width: 50px;
+	background-image: url(../img/Spaceship.gif);
+	top: calc(50% - 12.5px);
+	transition: 40ms;
+}
+.bullet {
+	width: 4px;
+	height: 4px;
+	position: absolute;
+	background-color: red;
+	border-radius: 50%;
+}
+.enemy1 {
+	width:30px;
+	height: 30px;
+	position: absolute;
+	background-image: url(../img/Asteroid1.png);
+	right: 0;
+	animation: asteroidRoll 6s linear infinite;
+}
+.enemy2 {
+	width:25px;
+	height: 25px;
+	position: absolute;
+	background-image: url(../img/enemy_02.gif);
+	right: 0;
+}
+.rules {
+	display: flex;
+	width: 300px;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-size: 25px;
+	position: absolute;
+	top: 20px;
+	left: calc(50% - 150px);
+}
+.plus100 {
+	background-image: url(../img/+100.png);
+	width: 30px;
+	height: 30px;
+	position: absolute;
+}
+.plus200 {
+	background-image: url(../img/+200.png);
+	width: 30px;
+	height: 30px;
+	position: absolute;
+}
+.score {
+	position: absolute;
+	top:5px;
+	right: 5px;
+	color: white;
+}
+.portal {
+	width: 20px;
+	height: 30px;
+	position: absolute;
+	left:0;
+	background-image: url(../img/test-breach6.gif);
+}
+
+
+
+@keyframes asteroidRoll {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(-360deg);}
+}
